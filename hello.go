@@ -3,8 +3,9 @@ package main
 import (
 	"fmt"
 	"log"
-	"rsc.io/quote"
+
 	"github.com/Sahil2004/greetings"
+	"rsc.io/quote"
 )
 
 func main() {
@@ -17,4 +18,11 @@ func main() {
 		log.Fatal(err)
 	}
 	fmt.Println(message)
+
+	names := []string{"Alice", "Bob", "Charlie"}
+	messages, err := greetings.Hellos(names)
+	if err != nil {
+		log.Fatal(err)
+	}
+	fmt.Println(messages)
 }
